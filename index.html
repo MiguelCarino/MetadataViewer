@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Metadata Viewer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/dicom-parser/dist/dicomParser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+<video id="mediaProbe" style="display:none;" preload="metadata" crossorigin="anonymous"></video>
+  <div class="container">
+    <h1>Universal Metadata Viewer</h1>
+    <div class="drop-area" id="drop-area">
+      <p>Drop a file or click to browse</p>
+      <input type="file" id="fileElem" hidden>
+    </div>
+    <pre id="output" class="metadata"></pre>
+    <div class="actions">
+      <button id="copyBtn">Copy to Clipboard</button>
+      <button id="downloadTxtBtn">Download as TXT</button>
+      <button id="downloadCsvBtn">Download as CSV</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
