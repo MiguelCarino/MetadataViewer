@@ -308,7 +308,6 @@ function parseCodeFile(file, baseMeta) {
   reader.readAsText(file);
 }
 
-
 // Basic ZIP
 function parseZip(buffer, baseMeta) {
   JSZip.loadAsync(buffer).then(zip => {
@@ -335,7 +334,6 @@ function parseText(file, baseMeta) {
   };
   reader.readAsText(file);
 }
-
 
 // Basic Exe parsing
 function parseExe(buffer, baseMeta) {
@@ -418,7 +416,6 @@ function parseMediaMetadata(file, baseMeta) {
     displayMetadata(baseMeta);
   };
 }
-
 
 // Display and update output
 function displayMetadata(data) {
